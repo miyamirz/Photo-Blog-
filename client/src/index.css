@@ -1,135 +1,165 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 #root {
-  width: 100vw;
-  height: 100vh;
+	width: 100vw;
+	height: 100vh;
 }
 .sidebar {
-  float: left;
-  width: 15%;
-  height: 100%;
-  background-color: black;
+	float: left;
+	width: 15%;
+	height: 100%;
+	background-color: black;
 }
 .sidebar .profile-section {
-  width: 100%;
-  height: 20%;
+	width: 100%;
+	height: 20%;
 }
 .sidebar .options {
-  width: 100%;
-  height: 80%;
+	width: 100%;
+	height: 80%;
 }
 .sidebar .options .options-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .sidebar .options .options-list > a {
-  text-decoration: none;
-  text-align: center;
-  outline: none;  
-  margin-top: 10%;
-  margin-bottom: 10%;
-  width: 100%;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  color: #fff;
-  transition:all 0.4s ease-in;
+	text-decoration: none;
+	text-align: center;
+	outline: none;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	width: 100%;
+	padding-top: 25%;
+	padding-bottom: 25%;
+	color: #fff;
+	transition: all 0.4s ease-in;
 }
 .options .options-list > a:hover {
-  background-color: #fff;
-  color: black;
+	background-color: #fff;
+	color: black;
 }
 .container {
-  float: left;
-  width: 85%;
-  height: 100%;
-  text-align: center;
-  z-index: 5;
-  overflow: scroll;
+	float: left;
+	width: 85%;
+	height: 100%;
+	text-align: center;
+	z-index: 5;
+	overflow: scroll;
 }
 .home-container {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 .home-container h1 {
-  position: relative;
-  top: 40%;
-  font-size: 5rem;
-  z-index: 5;
+	position: relative;
+	top: 40%;
+	font-size: 5rem;
+	z-index: 5;
 }
 .home-container::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 15%;
-  width: 100%;
-  height: 100%;
-  background: url("https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")
-    center no-repeat;
-  background-size: cover;
-  opacity: 0.7;
-  z-index: 1;
+	content: '';
+	position: absolute;
+	top: 0%;
+	left: 15%;
+	width: 100%;
+	height: 100%;
+	background: url('https://images.unsplash.com/photo-1513530534585-c7b1394c6d51?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')
+		center no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+	z-index: 1;
 }
 
 .albums-list {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 5px;
-  justify-content: center;
-  align-content: center;
-  overflow: scroll;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 5px;
+	justify-content: center;
+	align-content: center;
+	overflow: scroll;
 }
+
 .album {
-  flex: 1 1 45%;
-  margin: 0.5vw;
-  font-size: 10px;
-  height: 50%;
-  overflow: hidden;
-  border: 3px solid #f0f0f0;
-  border-radius: 10px;
-  transition: all 0.2s ease-in;
-  display: flex;
-  justify-content: center;
-  background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60') no-repeat center ;
-  background-size: cover;   
-  padding-top:10%;
-  padding-bottom: 10%;  
-  text-decoration: none;
-  font-size: 25px;
-  color:black;
+	flex: 1 1 45%;
+	margin: 0.5vw;
+	font-size: 10px;
+	height: 50%;
+	overflow: hidden;
+	border: 3px solid #f0f0f0;
+	border-radius: 10px;
+	transition: all 0.2s ease-in;
+	display: flex;
+	justify-content: center;
+	background: url('https://images.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
+		no-repeat center;
+	background-size: cover;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	text-decoration: none;
+	font-size: 25px;
+	color: black;
 }
 .album:hover {
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .photos-panel {
-  display: flex;
-  flex-flow: row wrap;
-  padding: 5px 40px 5px;
-  overflow: scroll;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 5px 40px 5px;
+	overflow: scroll;
 }
 .photo {
-  flex: 0 0 150px;
-  margin: 0.5vw;
-  font-size: 10px;
-  height: 150px;
-  overflow: hidden;
-  border: 3px solid #f0f0f0;
-  border-radius: 10px;
-  transition: all 0.2s ease-in;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;   
-  /* padding-top:10%;
-  padding-bottom: 10%;   */
-  text-decoration: none;
-  font-size: 25px;
-  color:black;
+	flex: 0 0 150px;
+	margin: 0.5vw;
+	font-size: 10px;
+	height: 150px;
+	overflow: hidden;
+	border: 3px solid #f0f0f0;
+	border-radius: 10px;
+	transition: all 0.2s ease-in;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-decoration: none;
+	font-size: 25px;
+	color: black;
+}
+
+.posts-list {
+	display: flex;
+  flex-flow: column nowrap;
+  background-color:black
+}
+.post-content {
+  flex: 1 1 200px;;
+  margin:0.5vh;
+  background-color: antiquewhite
+}
+.post {
+	padding: 10px;
+  background-color: antiquewhite;
+  text-align: start;
+}
+.post-title {
+	padding-top: 10px;
+  padding-bottom: 10px;
+  font-size:1.5rem;
+  text-transform: uppercase;
+  margin-top:50px;
+
+}
+.post-body {
+	padding-top: 10px;
+  padding-bottom: 10px;
+  font-size:1rem;
+  margin-bottom:50px;
 }
 /* .photo img {
     width:100%;
@@ -143,3 +173,45 @@
     filter: brightness(100%);
     transform: scale(1.05);
   } */
+.comments-container{
+background-color: aliceblue;
+padding:10px;
+margin: 15px;
+display: flex;
+flex-flow: column wrap;
+align-items: flex-start;
+}
+.comment{
+  flex:1 1 50px;
+  padding:5px;
+  margin: 5px;
+  width: 100%;
+  text-align: start;
+  border: 2px solid black;
+}
+.comments-container::before{
+  content:'COMMENTS';
+  margin: 5px;
+}
+.comment-name,.comment-email,.comment-body{
+  padding: 10px;
+}
+.comment-email{
+  padding-top:0px;
+}
+.comment-name{
+  padding-bottom: 0px;
+}
+.comment-name::before{
+  content:'BY : ';
+  margin-right:5px;
+}
+.comment-email::before{
+  content:'EMAIL : ';
+  margin-right:5px;
+}
+.comment-body::before{
+  content:'COMMENTS : ';
+  margin-right:5px;
+}
+
