@@ -1,0 +1,26 @@
+{
+  "name": "photo-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyamirz/Photo-Blog.git"
+  },
+  "author": "Miya Mirza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miyamirz/Photo-Blog/issues"
+  },
+  "homepage": "https://github.com/miyamirz/Photo-Blog#readme",
+  "dependencies": {
+    "cross-fetch": "^3.0.4",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0"
+  }
+}
