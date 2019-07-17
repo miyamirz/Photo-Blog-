@@ -1,35 +1,41 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { fetchAlbumsList } from "../actions/albums";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchAlbumsList } from '../actions/albums';
+import { Link } from 'react-router-dom';
+
 class AlbumsList extends Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount() {
-    this.props.fetchAlbumsList();
-  }
-  renderAlbums = albums => {
-    return albums.map(album => {
-      return (
-        <div className="album" key={album.id}>
-          <h1>{album.title}</h1>
-        </div>
-      );
-    });
-  };
-  render() {
-    let data = this.props.albumsList;
-    return <div className="albums-list">{this.renderAlbums(data)}</div>;
-  }
+	componentDidMount() {
+		this.props.fetchAlbumsList();
+	}
+	renderAlbums = albums => {
+		return albums.map(album => {
+			return (
+				<Link
+					className="album"
+					to={`/photos/${album.id}`}
+					key={album.id}
+				>
+					{album.title}
+				</Link>
+			);
+		});
+	};
+	render() {
+		let data = this.props.albumsList;
+		return (
+			<>
+				<div className="albums-list">{this.renderAlbums(data)}</div>
+			</>
+		);
+	}
 }
 const mapStateToProps = ({ albumsList }) => {
-  console.log("map:" + JSON.stringify(albumsList));
-  return { albumsList };
+	return { albumsList };
 };
 const mapDispatchToProps = {
-  fetchAlbumsList
+	fetchAlbumsList
 };
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(AlbumsList);
