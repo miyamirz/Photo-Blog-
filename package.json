@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node index.js --watch"
+    "client": "npm run start --prefix client",
+    "server": "nodemon index.js ",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,12 @@
   },
   "homepage": "https://github.com/miyamirz/Photo-Blog#readme",
   "dependencies": {
+    "concurrently": "^4.1.1",
     "cross-fetch": "^3.0.4",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.19.0",
+    "nodemon": "^1.19.1"
   }
 }
