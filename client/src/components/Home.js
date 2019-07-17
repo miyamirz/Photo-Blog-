@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
-import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom';
-import AlbumsList from './AlbumsList';
-import PostsList from './PostsList';
+import React, { Component } from "react";
 class Home extends Component {
-    render() {
-        console.log("rendering")
-        return (
-            <>
-	            <Link to='/AlbumsList'>AlbumsList</Link>
-				<Link to ='/PostsList'>PostsList</Link>
-         </>
-        );
-    }
+  render() {
+    console.log("rendering");
+    return (
+      <div className="home-container">
+        <h1>Follow me to the world of dreams!!</h1>
+      </div>
+    );
+  }
 }
 
-export default Home;    
+export default Home;
