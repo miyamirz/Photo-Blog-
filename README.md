@@ -4,7 +4,7 @@
 
 This application is a basic single page application developed using ReactJS and other tech stack.<br>
 
-## `Application Live Url1
+### `Application Live Url`
 The application is live. Check it out here: https://photo-blog-application.herokuapp.com/
 
 ### `Features`
