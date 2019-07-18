@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class Sidebar extends Component {
   render() {
     let { name } = this.props;
-    console.log(name);
+
     return (
       <div className="sidebar">
         <div className="profile-section">

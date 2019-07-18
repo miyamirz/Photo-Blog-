@@ -157,7 +157,10 @@
   font-size: 25px;
   color: black;
 }
-
+.photo:hover {
+	filter: brightness(100%);
+	transform: scale(1.05);
+  }
 .posts-list {
   display: flex;
   flex-flow: column wrap;

@@ -1,15 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore, applyMiddleware } from "redux";
-import { Provider } from "react-redux";
 import App from "./components/App";
-import RootReducer from "./reducers/index";
-import ReduxPromise from "redux-promise";
+import Root from "./Root";
 import { user } from "./utils";
-const store = createStore(RootReducer, { user }, applyMiddleware(ReduxPromise));
 ReactDOM.render(
-  <Provider store={store}>
+  <Root initialState={{ user }}>
     <App />
-  </Provider>,
+  </Root>,
   document.getElementById("root")
 );

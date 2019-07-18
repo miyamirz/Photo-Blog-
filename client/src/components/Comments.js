@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { fetchComments } from "../utils";
 import PropTypes from "prop-types";
 export default class Comments extends Component {
@@ -10,10 +9,11 @@ export default class Comments extends Component {
     };
   }
   componentDidMount() {
-    fetchComments(this.props.postId).then(res => {
-      console.log("res:" + JSON.stringify(res));
-      this.setState({ commentsList: res });
-    });
+    fetchComments(this.props.postId)
+      .then(res => {
+        this.setState({ commentsList: res });
+      })
+      .catch(e => console.log(e));
   }
 
   renderComments() {
