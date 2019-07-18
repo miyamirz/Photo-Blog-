@@ -4,9 +4,6 @@ const PORT = process.env.PORT || 5000;
 const axios = require("axios");
 const path = require("path");
 require("./routes/startup")(app);
-console.log(path.join(__dirname, "client/build"));
-console.log(path.resolve(__dirname, "client", "build", "index.html"));
-console.log(path.join(__dirname + "/client/build/index.html"));
 if (process.env.NODE_ENV === "production") {
   console.log("App running in production-------------");
   //Express will serve up production assets
