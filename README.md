@@ -4,6 +4,9 @@
 
 This application is a basic single page application developed using ReactJS and other tech stack.<br>
 
+## `Application Live Url1
+The application is live. Check it out here: https://photo-blog-application.herokuapp.com/
+
 ### `Features`
 
 ->View current user's Albums and the photos present in each album<br>
@@ -28,5 +31,6 @@ react-router<br>
 
 1.clone the repo<br>
 2.use 'cd photo-blog' to navigate to app directory<br>
-3.run 'npm run setup' ( this step is required to install both client and server dependencies)<br>
+3.run 'npm install' ( this step is required to install server dependencies)<br>
+4.run 'npm install' ( this step is required to install client dependencies)<br>
 4.run 'npm run dev' (launches the application in development mode.)<br>
