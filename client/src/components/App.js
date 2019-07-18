@@ -8,14 +8,14 @@ import Gallery from './Gallery';
 import { connect } from 'react-redux';
 import '../index.css';
 class App extends Component {
-	componentDidMount() {
-		//console.log('user :' + this.props.user);
-	}
 	render() {
 		return (
 			<>
 				<Router>
-					<Sidebar />
+					<Sidebar
+						name={this.props.user.name}
+						email={this.props.user.email}
+					/>
 					<div className="container">
 						<Switch>
 							<Route path="/" exact component={Home} />
@@ -38,7 +38,7 @@ class App extends Component {
 		);
 	}
 }
-const mapStateToProps = state => {
-	return state;
+const mapStateToProps = ({ user }) => {
+	return { user };
 };
 export default connect(mapStateToProps)(App);

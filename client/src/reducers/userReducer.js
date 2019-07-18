@@ -1,8 +1,3 @@
-export const user = (state = "", action) => {
-  switch (action.payload) {
-    case "USER":
-      return action.payload;
-    default:
-      return state;
-  }
+export const user = (state = {}, action) => {
+	return state;
 };
