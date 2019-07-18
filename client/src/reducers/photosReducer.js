@@ -1,9 +1,9 @@
-import { FETCH_PHOTOS } from '../actions/types';
+import { FETCH_PHOTOS } from "../actions/types";
 export const photosReducer = (state = [], action) => {
-	switch (action.type) {
-		case FETCH_PHOTOS:
-			return [...action.payload];
-		default:
-			return state;
-	}
+  switch (action.type) {
+    case FETCH_PHOTOS:
+      return [...action.payload];
+    default:
+      return state;
+  }
 };
