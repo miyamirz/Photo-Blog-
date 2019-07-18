@@ -12,8 +12,8 @@ if (process.env.NODE_ENV === "production") {
   //Express will serve up production assets
   //like our main.js file or main.css file
 
+  const path = require("path");
   app.use(express.static(path.join(__dirname, "client/build")));
-
   //Express will serve up the index.html
   //it it does not recognize the route
   app.get("/test", (req, res) => {
